@@ -1,6 +1,6 @@
 {
   "name": "directory-react-routes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple module that translate a directory from a webpack-context to react-router routes.",
   "main": "index.js",
   "scripts": {

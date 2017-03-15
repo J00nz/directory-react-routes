@@ -17,9 +17,18 @@ export default function DirectoryToReactRoutes(req, filter, routeProps) {
   })
   
   var routes = Object.keys(pageComponents).map(function(i) {
-    var path = "/" + i.replace(/\/index$/, '')
+    var path = "/" + i.replace(/\/index$/, '');
     
-    return <Route key={i} path={ path + "(/**)"} component={ pageComponents[i].default } base={ path } { ...routeProps } />
+    var props = {
+      key: i, 
+      path: path + "(/**)",
+      component: pageComponents[i].default,
+      base: path,
+    };
+    
+    Object.assign(props, routeProps);
+    
+    return React.createElement(Route, props);
   })
   
   return routes
