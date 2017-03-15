@@ -27,7 +27,9 @@ Useful if you would like to inject something as a onLoad etc.
 ```js
 var directoryRoutes = require('directory-react-routes');
 
-var routes = directoryRoutes('./pages/', function(route) { return route.doAdd }, { onEnter: function() { alert("routed!") } })
+var context = require.context('./pages/', true, /^(.*\.(jsx$))[^.]*$/igm)
+
+var routes = directoryRoutes(context, function(route) { return route.doAdd }, { onEnter: function() { alert("routed!") } })
 
 
 <Router>
