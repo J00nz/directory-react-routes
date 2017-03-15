@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route } from 'react-router'
+var React = require('react');
+var Route = require('react-router').Route
 
 export default function DirectoryToReactRoutes(req, filter, routeProps) {
   
