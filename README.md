@@ -1,6 +1,11 @@
 # directory-react-routes
 Simple module that translate a directory from a webpack-context to react-router routes.
 
+Eg: a file with the following path: c:/dev/pages/directory/test.jsx
+where you start your context in: c:/dev/pages/
+will get you the route: directory/test
+
+
 ## Install
 
 ```
